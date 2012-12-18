@@ -4,18 +4,22 @@
 <%@ Register TagPrefix="HOME" TagName="Emergency" Src="~/MCPSWebUserControls/2011/emergencyCenterpage.ascx"%>
 
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head id="Head1" runat="server">
-    <meta charset="UTF-8" />
-    <title>Montgomery County Public Schools, Rockville, MD</title>
-    <link rel="stylesheet" href="mcps.css" />
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="/global/2011/css/jquery-ui-1.7.2.custom.css" />
-  <link rel="stylesheet" href="/global/2011/css/print.css" media="print">
-	<link rel="stylesheet" href="/global/2011/css/responsive.css" />
+    <title>Montgomery County Public Schools, Rockville, MD</title>
+	
+    <link rel="stylesheet" href="mcps.css" />
+	<link rel="stylesheet" href="normalize.css" />
+	<link rel="stylesheet" href="/global/2011/css/jquery-ui-1.7.2.custom.css" />
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
     <script src="/global/2011/js/equalheights.js"></script>
+	<script src="js/vendor/modernizr-2.6.1.min.js"></script>
     <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
 
     <!-- Begin Google Analytics mei 2/25/11 -->
@@ -37,10 +41,20 @@
 </head>
 <body>
      <div id="toprow">
-	<div id="header">
-
-	    <h1 id="title">Montgomery County Public Schools</h1>
-	    <form action="http://search.montgomeryschoolsmd.org/search" method="get" id="search">		
+	<header>
+	<div id="banner"><img alt="MCPS Banner" src="/global/2011/images/banners/banner_mobile.jpg" width="420px" height="154px"></div>
+<div id="secondarynav">
+	    <h1 id="logo"><a href="http://www.montgomeryschoolsmd.org/"><img alt="Montgomery County Public Schools" src="/global/2011/images/mcps-title.png"></a></h1>
+	
+		<ul id="languages">
+		 <li class="first"><a href="http://www.montgomeryschoolsmd.org/es/">espa&ntilde;ol</a></li>
+		 <li><a href="http://www.montgomeryschoolsmd.org/languages/chinese/">中文</a></li>
+		 <li><a href="http://www.montgomeryschoolsmd.org/languages/french/">français</a></li>
+		 <li><a href="http://www.montgomeryschoolsmd.org/languages/vietnamese/">Việt Nam</a></li>
+		 <li><a href="http://www.montgomeryschoolsmd.org/languages/korean/"> 한국어 </a></li>
+	   </ul>
+	    
+		<form action="http://search.montgomeryschoolsmd.org/search" method="get" id="search">		
 		<input type="hidden" name="site" value="mainsite" />
 		<input type="hidden" name="proxystylesheet" value="mainsite" />
 		<input type="hidden" name="client" value="mainsite"/>  
@@ -54,16 +68,14 @@
 		<input type="search" size="38" name="q" />
 		<input type="submit" value="Search" class="orange button" />
         </form>
-	    <ul id="languages">
-		 <li class="first"><a href="http://www.montgomeryschoolsmd.org/es/">espa&ntilde;ol</a></li>
-		 <li><a href="http://www.montgomeryschoolsmd.org/languages/chinese/">中文</a></li>
-		 <li><a href="http://www.montgomeryschoolsmd.org/languages/french/">français</a></li>
-		 <li><a href="http://www.montgomeryschoolsmd.org/languages/vietnamese/">Việt Nam</a></li>
-		 <li><a href="http://www.montgomeryschoolsmd.org/languages/korean/"> 한국어 </a></li>
-	   </ul>
-	</div><!-- / #header -->
+
+</div>	   
+	  <div class="clear"></div> 
+</header> 
+	<!-- / #header -->
 	
-	<ul id="nav">
+<nav>
+	<ul>
 		<li><a href="http://www.montgomeryschoolsmd.org/">Home</a></li>
 		<li><a href="http://www.montgomeryschoolsmd.org/schools/">Schools</a></li>
 		<li><a href="http://www.montgomeryschoolsmd.org/parents/">Parents &amp; Students</a></li>
@@ -74,8 +86,8 @@
 		<li><a href="http://www.montgomeryschoolsmd.org/news/">News</a></li>
 		<li><a href="http://www.montgomeryschoolsmd.org/about/">About Us</a></li>
 	</ul>
-
-     </div><!-- / #toprow -->
+</nav>
+</div><!-- / #toprow -->
 
  
 
@@ -83,19 +95,20 @@
         <!-- include header here -->
         <%-- <Home:MCPSHeader ID="mcpsHeader1" runat="server" /> --%>
         <div id="main">
+		<div id="content">
 	    <HOME:Emergency ID="HomePageEmergency1" runat="server" />
             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
             </asp:ContentPlaceHolder>
         </div>
-        
+        	</div>
         
         <div class="clear"></div>
         <div id="bottomrow">
-          <div id="footer">
+          <footer>
           <Tron:ContentDetail ID="Footer" ContentID ="165427" runat="server" />
 		  
 		  <div class="clear"></div>
-          </div> 
+          </footer> 
             <!-- /#footer -->
         </div>
         <!-- /#bottomrow -->
@@ -111,6 +124,9 @@
         </script>
         
     </form>
+
+
+
 </body>
 </html>
 
