@@ -1,0 +1,118 @@
+<%@ Master Language="VB" CodeFile="mcps.master.vb" Inherits="_2011_mcps"  AutoEventWireup="false"%> 
+<%@ Register Src="~/MCPSWebUserControls/2011/tronContentBlockDetail.ascx" TagName="ContentDetail" TagPrefix="Tron" %>
+<%--<%@ Register src="~/MCPSWebUserControls/2011/mcpsHeader.ascx" tagname="MCPSHeader" tagprefix="Home" %> --%>
+<%@ Register TagPrefix="HOME" TagName="Emergency" Src="~/MCPSWebUserControls/2011/emergencyCenterpage.ascx"%>
+
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+    <meta charset="UTF-8" />
+    <title>Montgomery County Public Schools, Rockville, MD</title>
+    <link rel="stylesheet" href="mcps.css" />
+
+    <link rel="stylesheet" href="/global/2011/css/jquery-ui-1.7.2.custom.css" />
+  <link rel="stylesheet" href="/global/2011/css/print.css" media="print">
+	<link rel="stylesheet" href="/global/2011/css/responsive.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+    <script src="/global/2011/js/equalheights.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Begin Google Analytics mei 2/25/11 -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4702487-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>        
+    <!-- End Google Analytics -->
+
+</head>
+<body>
+     <div id="toprow">
+	<div id="header">
+
+	    <h1 id="title">Montgomery County Public Schools</h1>
+	    <form action="http://search.montgomeryschoolsmd.org/search" method="get" id="search">		
+		<input type="hidden" name="site" value="mainsite" />
+		<input type="hidden" name="proxystylesheet" value="mainsite" />
+		<input type="hidden" name="client" value="mainsite"/>  
+		<input type="hidden" name="access" value="p" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="hidden" name="oe" value="UTF-8" />
+        <input type="hidden" name="filter" value="0" />
+        <input type="hidden" name="numgm" value="5" />
+		<input type="hidden" name="output" value="xml_no_dtd" />
+		<input type="hidden" name="sort" value="date:D:L:d1" />
+		<input type="search" size="38" name="q" />
+		<input type="submit" value="Search" class="orange button" />
+        </form>
+	    <ul id="languages">
+		 <li class="first"><a href="http://www.montgomeryschoolsmd.org/es/">espa&ntilde;ol</a></li>
+		 <li><a href="http://www.montgomeryschoolsmd.org/languages/chinese/">中文</a></li>
+		 <li><a href="http://www.montgomeryschoolsmd.org/languages/french/">français</a></li>
+		 <li><a href="http://www.montgomeryschoolsmd.org/languages/vietnamese/">Việt Nam</a></li>
+		 <li><a href="http://www.montgomeryschoolsmd.org/languages/korean/"> 한국어 </a></li>
+	   </ul>
+	</div><!-- / #header -->
+	
+	<ul id="nav">
+		<li><a href="http://www.montgomeryschoolsmd.org/">Home</a></li>
+		<li><a href="http://www.montgomeryschoolsmd.org/schools/">Schools</a></li>
+		<li><a href="http://www.montgomeryschoolsmd.org/parents/">Parents &amp; Students</a></li>
+		<li><a href="http://www.montgomeryschoolsmd.org/boe/">Board of Education</a></li>
+		<li><a href="http://www.montgomeryschoolsmd.org/departments/superintendent/">Superintendent</a></li>
+		<li><a href="http://www.montgomeryschoolsmd.org/staff/">Staff</a></li>
+		<li><a href="http://www.montgomeryschoolsmd.org/departments/careers/">Careers</a></li>
+		<li><a href="http://www.montgomeryschoolsmd.org/news/">News</a></li>
+		<li><a href="http://www.montgomeryschoolsmd.org/about/">About Us</a></li>
+	</ul>
+
+     </div><!-- / #toprow -->
+
+ 
+
+    <form id="form1" runat="server">
+        <!-- include header here -->
+        <%-- <Home:MCPSHeader ID="mcpsHeader1" runat="server" /> --%>
+        <div id="main">
+	    <HOME:Emergency ID="HomePageEmergency1" runat="server" />
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        
+        <div class="clear"></div>
+        <div id="bottomrow">
+          <div id="footer">
+          <Tron:ContentDetail ID="Footer" ContentID ="165427" runat="server" />
+		  
+		  <div class="clear"></div>
+          </div> 
+            <!-- /#footer -->
+        </div>
+        <!-- /#bottomrow -->
+        
+        <!-- jquery function calls -->
+        <script>
+            $(document).ready(function() {
+                $("#tabs").tabs();
+
+                $(".equal").equalHeights();
+                $(".equal2").equalHeights();
+            });
+        </script>
+        
+    </form>
+</body>
+</html>
+
+
+ 
