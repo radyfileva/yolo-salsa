@@ -34,7 +34,7 @@ $(document).ready(function() {
   $("#tabs-4").addClass('tabbed-content');
   $("hr").hide();
 
-  $(".equal").equalHeights();
+	$(".equal").equalHeights();
 	$(".equal2").equalHeights();
 	
 	$(".tabbed-content").equalHeights();
@@ -53,12 +53,15 @@ $(document).ready(function() {
 
  <Tron:HomeStories ID="topNews"  runat="server" ContentID="17762"/>  
 <!-- /#news -->
- <Tron:ContentDetail ID="MiddleBar" ContentID ="165466" runat="server" /> 
+ <Tron:ContentDetail ID="MiddleBar" ContentID ="278432" runat="server" />
+
  <div class="clear"></div>
- <Tron:ContentDetail ID="ThreeColumns" ContentID ="165467" runat="server" /> 
+
+ <section class="floatl threecol box equal"><Tron:ContentDetail  ContentID ="278334" runat="server" /> </section>
+ <section class="floatl threecol box  equal"><Tron:ContentDetail  ContentID ="278337" runat="server" />  </section>
+ <section class="floatr threecol box equal"><Tron:ContentDetail ContentID ="278341" runat="server" /> </section>
  <div class="clear"></div>
-<div class="full capped box boxes" id="events">
-	<Tron:RememberCalendar ID="homeClendar"  runat="server" ContentID="17762"/> 
+ <div class="full  box " id="events">
+	<Tron:ContentDetail ContentID ="278586" runat="server" /> 
 </div>
-<div class="clear"></div>
 </asp:Content>
