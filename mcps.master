@@ -41,8 +41,8 @@
 </head>
 <body>
      <div id="toprow">
-	<header>
-	<div id="banner"><img alt="MCPS Banner" src="/global/2011/images/banners/banner_mobile.jpg" width="420px" height="154px"></div>
+	<header class="maxwidth">
+	<div id="banner"><img alt="MCPS Banner" src="/global/2011/images/banners/banner.png" ></div>
 <div id="secondarynav">
 	    <h1 id="logo"><a href="http://www.montgomeryschoolsmd.org/"><img alt="Montgomery County Public Schools" src="/global/2011/images/mcps-title.png"></a></h1>
 	
@@ -65,7 +65,7 @@
         <input type="hidden" name="numgm" value="5" />
 		<input type="hidden" name="output" value="xml_no_dtd" />
 		<input type="hidden" name="sort" value="date:D:L:d1" />
-		<input type="search" size="38" name="q" />
+		<input type="search" size="35" name="q" />
 		<input type="submit" value="Search" class="orange button" />
         </form>
 
@@ -74,7 +74,7 @@
 </header> 
 	<!-- / #header -->
 	
-<nav>
+<nav class="maxwidth">
 	<ul>
 		<li><a href="http://www.montgomeryschoolsmd.org/">Home</a></li>
 		<li><a href="http://www.montgomeryschoolsmd.org/schools/">Schools</a></li>
@@ -87,6 +87,8 @@
 		<li><a href="http://www.montgomeryschoolsmd.org/about/">About Us</a></li>
 	</ul>
 </nav>
+
+
 </div><!-- / #toprow -->
 
  
@@ -94,7 +96,7 @@
     <form id="form1" runat="server">
         <!-- include header here -->
         <%-- <Home:MCPSHeader ID="mcpsHeader1" runat="server" /> --%>
-        <div id="main">
+        <div id="main" class="maxwidth">
 		<div id="content">
 	    <HOME:Emergency ID="HomePageEmergency1" runat="server" />
             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
@@ -103,8 +105,9 @@
         	</div>
         
         <div class="clear"></div>
+		
         <div id="bottomrow">
-          <footer>
+       <footer class="maxwidth">
           <Tron:ContentDetail ID="Footer" ContentID ="165427" runat="server" />
 		  
 		  <div class="clear"></div>
@@ -113,18 +116,9 @@
         </div>
         <!-- /#bottomrow -->
         
-        <!-- jquery function calls -->
-        <script>
-            $(document).ready(function() {
-                $("#tabs").tabs();
 
-                $(".equal").equalHeights();
-                $(".equal2").equalHeights();
-            });
-        </script>
         
     </form>
-
 
 
 </body>
