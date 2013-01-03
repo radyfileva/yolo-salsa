@@ -34,10 +34,8 @@ $(document).ready(function() {
   $("#tabs-4").addClass('tabbed-content');
   $("hr").hide();
 
-	$(".equal").equalHeights();
-	$(".equal2").equalHeights();
 	
-	$(".tabbed-content").equalHeights();
+	$(".tabbed-content");
   numTabs = $("#news #storyselector li a").length;
    
   $("#news #storyselector li a").click(function() { 
@@ -51,17 +49,20 @@ $(document).ready(function() {
 
 <!-- <p class="padded"><strong>For staff:</strong> <a href="migration.html">View status and availability of online systems.</a></p>  -->
 
- <Tron:HomeStories ID="topNews"  runat="server" ContentID="17762"/>  
+ <Tron:ContentDetail  runat="server" ContentID="279869"/>  
 <!-- /#news -->
- <Tron:ContentDetail ID="MiddleBar" ContentID ="278432" runat="server" />
 
- <div class="clear"></div>
 
- <section class="floatl threecol box equal"><Tron:ContentDetail  ContentID ="278334" runat="server" /> </section>
- <section class="floatl threecol box  equal"><Tron:ContentDetail  ContentID ="278337" runat="server" />  </section>
- <section class="floatr threecol box equal"><Tron:ContentDetail ContentID ="278341" runat="server" /> </section>
- <div class="clear"></div>
- <div class="full  box " id="events">
+
+ 
+
+ <section class="floatl threecol "><Tron:ContentDetail  ContentID ="278334" runat="server" /> </section>
+ <section class="floatl threecol borders "><Tron:ContentDetail  ContentID ="278337" runat="server" />  </section>
+ <section class="floatr threecol "><Tron:ContentDetail ContentID ="278341" runat="server" /> </section>
+
+ 
+
+ <div class="full clear box " id="events">
 	<Tron:ContentDetail ContentID ="278586" runat="server" /> 
 </div>
 </asp:Content>
