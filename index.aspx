@@ -1,5 +1,5 @@
 <%@ Page Title="Montgomery County Public Schools, Rockville, MD" Language="VB" MasterPageFile="mcps.master" AutoEventWireup="false" %>
-<%@OutputCache Duration="60" VaryByParam="none" %>
+<%@OutputCache Duration="10" VaryByParam="none" %>
 <%@ Register Src="~/MCPSWebUserControls/2011/tronContentBlockDetail.ascx" TagName="ContentDetail" TagPrefix="Tron" %>
 <%@ Register Src="~/MCPSWebUserControls/2011/homePageStories.ascx" TagName="HomeStories" TagPrefix="Tron" %>
 <%@ Register Src="~/MCPSWebUserControls/RememberanceCalendar.ascx" TagName="RememberCalendar" TagPrefix="Tron" %>
@@ -49,20 +49,21 @@ $(document).ready(function() {
 
 <!-- <p class="padded"><strong>For staff:</strong> <a href="migration.html">View status and availability of online systems.</a></p>  -->
 
- <Tron:ContentDetail  runat="server" ContentID="279869"/>  
+ <section id="news" class="full box"><Tron:ContentDetail  runat="server" ContentID="279869"/> </section> 
 <!-- /#news -->
 
 
 
  
 
- <section class="floatl threecol "><Tron:ContentDetail  ContentID ="278334" runat="server" /> </section>
- <section class="floatl threecol borders "><Tron:ContentDetail  ContentID ="278337" runat="server" />  </section>
+ <section class="floatl threecol borderr "><Tron:ContentDetail  ContentID ="278334" runat="server" /> </section>
+ <section class="floatl threecol borderr "><Tron:ContentDetail  ContentID ="278337" runat="server" />  </section>
  <section class="floatr threecol "><Tron:ContentDetail ContentID ="278341" runat="server" /> </section>
 
  
 
- <div class="full clear box " id="events">
+ <section id="events" class="full clear box " >
+ 
 	<Tron:ContentDetail ContentID ="278586" runat="server" /> 
-</div>
+</section>
 </asp:Content>
