@@ -120,26 +120,26 @@ a:hover {
  */
 
 h1 {
-    font-size: 1em;
-    margin: 0.6em 0;
+    font-size: 1.5em;
+    margin:0.5em 0;
 	
 }
 
 h2 {
-    font-size: 1.6em;
+    font-size: 1.35em;
     margin: 0.83em 0;
 	font-weight:bold;
-	color:#444444;
+	color:#314b68;
 	font-family:Georgia, "Times New Roman", Times, serif;
 }
 
 h3 {
 
-    font-size: 1.4em;
-    line-height: 1.4em;
+    font-size: 1.25em;
+    line-height: 1.25em;
     margin: 1.2em 0 .9em 0;
 	border-bottom: 1px dotted #3C5A78;
-	color:#444444;
+	color:#314b68;
 	font-weight:600; 
 	font-family:Georgia, "Times New Roman", Times, serif;
 
@@ -147,21 +147,24 @@ h3 {
 }
 
 h4 {
-    font-size: 1.3em;
+    font-size: 1.1em;
 	font-weight:500;
 	line-height:1.3em;
     margin: .8em 0 .5em 0;
 	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#314b68;
 }
 
 h5 {
-    font-size: 0.83em;
+    font-size: 1em;
     margin: 1.67em 0;
+	color:#314b68;
 }
 
 h6 {
-    font-size: 0.67em;
+    font-size: 0.9em;
     margin: 2.33em 0;
+	color:#314b68;
 }
 
 /*
@@ -206,15 +209,17 @@ mark {
  * Addresses margins set differently in IE 6/7.
  */
 p { 
-
-
+    font-size: 0.875em;
+   line-height: 1.7em;
 }
 a {
-    color: #2A72CD;
-
+    color: #2A72CD;    
+	font-size: 0.875em;
+   line-height: 1.7em; 
     font-weight: bold;
     text-decoration: none;
 }
+p a{   font-size: 100%;}
 li img {
     float: left;
     padding-right: 0.2em;
@@ -472,10 +477,8 @@ input[type="radio"] {
  */
 
 input[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box; /* 2 */
-    box-sizing: content-box;
+
+
 }
 
 /*
